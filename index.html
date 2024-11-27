@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip.com</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .nav-link {
+        transition: color 0.3s;
+      }
+
+      .nav-link:hover {
+        color: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <nav class="bg-white shadow-md p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold">Trip.com</a>
+        <div class="space-x-4">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="md:inline hidden nav-link">Services</a>
+          <a href="#booking" class="md:inline hidden nav-link">Booking</a>
+          <a href="#ratings" class="md:inline hidden nav-link">Ratings</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="h-screen flex items-center justify-center bg-cover bg-center relative bg-left md:bg-center"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1730838071487-75fa33610fa4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      "
+    >
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="relative text-center text-white">
+        <h1  data-scroll data-scroll-speed="2" class="text-6xl font-extrabold mb-4 drop-shadow-lg ">
+          Welcome to Trip.com
+        </h1>
+        <p  data-scroll data-scroll-speed="2" class="text-2xl mb-8 drop-shadow-lg">
+          Enhancing your travel experience
+        </p>
+        <a
+          href="#services"
+          class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white md:px-6 py-3 rounded-full text-lg font-semibold transition duration-300 animate infinite px-3 py-1"
+          >Explore Services</a
+        >
+      </div>
+    </section>
+
+    
+<section id="about" class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8" data-scroll data-scroll-speed="1">About Us</h2>
+        <p class="text-lg mb-8" data-scroll data-scroll-speed="1">
+            We provide the best solutions to boost the tourism industry by offering comprehensive booking, rating, and information services.
+        </p>
+        <div class="md:flex flex flex-col md:flex-row  items-center justify-center gap-6 p-4">
+            <div data-scroll data-scroll-speed="1.5" class="md:w-1/2 w-full">
+                <img src="https://images.unsplash.com/photo-1730818875902-39d6b25bac0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJpcC5jb218ZW58MHx8MHx8fDA%3D" alt="About Us Image" class="rounded-lg shadow-lg" >
+                <h3 class="text-2xl mt-2">Travel</h3>
+            </div>
+            <div data-scroll data-scroll-speed="1" class="md:w-1/2 w-full">
+                <img src="https://images.unsplash.com/photo-1607816420124-038873dbd26b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVsJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D" alt="About Us Image" class="rounded-lg shadow-lg" >
+                <h3 class="text-2xl mt-2">Hotel</h3>
+
+            </div>
+            <div data-scroll data-scroll-speed="0.5" class="md:w-1/2 w-full">
+                <img src="https://images.unsplash.com/photo-1610538625499-635bf13427b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVzdG91cmFudHxlbnwwfHwwfHx8MA%3D%3D" alt="About Us Image" class="rounded-lg shadow-lg"  >
+                <h3 class="text-2xl mt-2">Restaurant</h3>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    gsap.from('#about h2', { duration: 1, x: 50, opacity: 0, ease: 'power1.out' });
+    gsap.from('#about p', { duration: 1, x: 50, opacity: 0, delay: 0.5, ease: 'power1.out' });
+    gsap.from('#about img', { duration: 1, scale: 0.8, opacity: 0, delay: 1, ease: 'power1.out' });
+</script>
+
+    <section id="services" class="py-16 bg-gray-200 p-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold rounded-xl mb-8" >Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-md" >
+                    <h3 class="text-2xl font-bold mb-4">Hotel Booking</h3>
+                    <h3 class="text-m  mb-4">Book the best hotels at the best prices.</h3>
+                    <p>We provide the best services and find the best budget friendly hotels for you that make you travelling easier</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md" >
+                    <h3 class="text-2xl font-bold mb-4">Travel Arrangements</h3>
+                    <h3 class="text-m  mb-4">Book the best hotels at the best prices.</h3>
+                    <p>We provide the best services and find the best budget friendly travels for you that make you travelling easier</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">Tourist Information</h3>
+                    <h3 class="text-m  mb-4">Book the best hotels at the best prices.</h3>
+                    <p>We provide the best services and find the best budget friendly tourism for you that make you travelling easier</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        gsap.from('#services h2', { duration: 1, y: 50, opacity: 0, ease: 'power1.out' });
+        gsap.from('#services .bg-white', { duration: 1, scale: 0.8, opacity: 0, delay: 0.5, stagger: 0.2, ease: 'power1.out' });
+    </script>
+    <section id="booking" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center p-2">
+            <h2 class="text-4xl font-bold mb-8">Booking</h2>
+            <p class="text-lg mb-8">
+                Easily book your hotels, travels, and more with our user-friendly platform.
+            </p>
+            <form action="https://getform.io/f/aollqwdb" method="POST" class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="first-name" class="block text-left text-gray-700 font-bold mb-2">First Name</label>
+                    <input type="text" id="first-name" name="first-name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="last-name" class="block text-left text-gray-700 font-bold mb-2">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-left text-gray-700 font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-left text-gray-700 font-bold mb-2">Phone No</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="departure" class="block text-left text-gray-700 font-bold mb-2">Departure</label>
+                    <input type="text" id="departure" name="departure" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="arrival" class="block text-left text-gray-700 font-bold mb-2">Arrival</label>
+                    <input type="text" id="arrival" name="arrival" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    
+
+    <section id="ratings" class="py-16 bg-gray-200">
+        <div class="container p-2 mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Ratings</h2>
+            <p class="text-lg mb-8">
+                Check out the ratings and reviews from other travelers.
+            </p>
+            <div class="flex justify-center">
+                <div class="flex space-x-2">
+                    <span class="star text-4xl cursor-pointer" data-value="1">&#9734;</span>
+                    <span class="star text-4xl cursor-pointer" data-value="2">&#9734;</span>
+                    <span class="star text-4xl cursor-pointer" data-value="3">&#9734;</span>
+                    <span class="star text-4xl cursor-pointer" data-value="4">&#9734;</span>
+                    <span class="star text-4xl cursor-pointer" data-value="5">&#9734;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-value');
+                stars.forEach(s => {
+                    s.innerHTML = s.getAttribute('data-value') <= rating ? '&#9733;' : '&#9734;';
+                });
+            });
+        });
+    </script>
+
+    
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center p-2">
+            <h2 class="text-4xl font-bold mb-8">Contact Us</h2>
+            <p class="text-lg mb-8">Get in touch with us for any queries or support. We are here to help you!</p>
+            <div class="flex justify-center space-x-8 mb-8">
+                <a href="https://www.instagram.com" target="_blank" class="text-gray-800 hover:text-blue-500 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.975 1.248 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.31-3.608.975-.975 2.242-1.248 3.608-1.31 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.281.058-2.418.27-3.29.542-.872.272-1.611.63-2.347 1.366-.736.736-1.094 1.475-1.366 2.347-.272.872-.484 2.009-.542 3.29-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.058 1.281.27 2.418.542 3.29.272.872.63 1.611 1.366 2.347.736.736 1.475 1.094 2.347 1.366.872.272 2.009.484 3.29.542 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.281-.058 2.418-.27 3.29-.542.872-.272 1.611-.63 2.347-1.366.736-.736 1.094-1.475 1.366-2.347.272-.872.484-2.009.542-3.29.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.281-.27-2.418-.542-3.29-.272-.872-.63-1.611-1.366-2.347-.736-.736-1.475-1.094-2.347-1.366-.872-.272-2.009-.484-3.29-.542-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.324c-2.296 0-4.162-1.866-4.162-4.162s1.866-4.162 4.162-4.162 4.162 1.866 4.162 4.162-1.866 4.162-4.162 4.162zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441zm-6.406 1.441c-2.071 0-3.75 1.679-3.75 3.75s1.679 3.75 3.75 3.75 3.75-1.679 3.75-3.75-1.679-3.75-3.75-3.75zm0 6.5c-1.518 0-2.75-1.232-2.75-2.75s1.232-2.75 2.75-2.75 2.75 1.232 2.75 2.75-1.232 2.75-2.75 2.75zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="text-gray-800 hover:text-blue-500 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.378-.022-3.152-1.922-3.152-1.922 0-2.218 1.5-2.218 3.052v5.6h-3v-10h2.878v1.367h.041c.4-.757 1.378-1.555 2.837-1.555 3.032 0 3.591 1.995 3.591 4.59v5.598z"/>
+                    </svg>
+                </a>
+                <a href="mailto:aadilmoid@gmail.com" class="text-gray-800 hover:text-blue-500 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12.713l11.985-7.713c-.003-1.104-.897-2-2.002-2h-19.966c-1.105 0-1.999.896-2.002 2l11.985 7.713zm-12-6.713v12c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-12l-11.985 7.713-11.985-7.713z"/>
+                    </svg>
+                </a>
+            </div>
+            <form action="https://getform.io/f/aollqwdb" method="POST" class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-left text-gray-700 font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-left text-gray-700 font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-left text-gray-700 font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-white shadow-md p-4 text-center">
+      <p>Made by  Akhlaq Uddin</p>
+    </footer>
+
+    <script>
+      const scroller = new LocomotiveScroll({
+        el: document.querySelector('body'),
+        smooth: true
+      })+
+      gsap.from('nav', { duration: 1, y: -100, opacity: 0, ease: 'bounce' })
+      gsap.from('#home h1', { duration: 1, x: -200, opacity: 0, delay: 0.5 })
+      gsap.from('#home p', { duration: 1, x: 200, opacity: 0, delay: 1 })
+      gsap.from('#home a', { duration: 1, scale: 0, opacity: 0, delay: 1.5 })
+    </script>
+  </body>
+</html>
